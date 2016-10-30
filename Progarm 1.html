@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 1</title>
+	<script type="text/javascript"> 
+		function totalCostTax() {
+			var a = document.totalCost.itemCost.value;
+			var b = document.totalCost.quantity.value;
+			var c = .06 * (a * b);
+			var d = c + a * b;
+			document.totalCost.cost.value = d;
+			document.getElementById("totalCost").reset();
+			
+		}
+	
+	
+	</script>
+</head>
+
+<body>
+	<p> Enter item cost and quantity purchased </p>
+	
+	<form name="totalCost"  method="post">
+		<input type="text" name="itemCost" size="15"/> Enter item cost <br />
+		<p><input type="text" name="quantity" size="15"/> Enter quantity purchased <br />
+		<p><input type="button" value="Click for Total" onclick="totalCostTax()"></p>
+		<p><input type="text" name="cost" size="15" /> Total cost with 6% tax <br />
+		<p> <input type="button" value="clear"> Reset </p>
+
+</body>
+
+<html>

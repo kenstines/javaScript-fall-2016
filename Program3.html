@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Program 3</title>
+
+			<script type="text/javascript"> 
+				
+					function tempConversionChart() {
+						var convertTable = "<table border='1'  cellspacing='0' cellpadding='6' text-align='center' style='width:100%'>";
+						convertTable += "<tr><th>Temperature Celsius</th><th>Temperature Fahrenheit</th>";
+						for(var degC = 0; degC <= 100; degC +=10) {
+						var degF = (9/5) * degC + 32
+						convertTable+= "<tr><td>" + degC + "</td><td>" + degF + "</td></tr>";
+					}
+					convertTable += "</table>"
+					document.write(convertTable)
+					}  
+			</script>
+	</head>
+			<body>
+				<h1 style="color:red"><center>CONVERT CELSIUS TO FAHRENHEIT</center></h1>
+		
+  
+				<form>
+					<center>
+						<input type="button" size=30 value="Show Temperature Chart" onclick="tempConversionChart()" > 
+					</center>
+				</form>
+ 
+			</body>
+
+</html>

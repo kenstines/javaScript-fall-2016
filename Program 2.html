@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 2</title>
+	
+	<script type="text/javascript"> 
+		function calculateTax() {
+		var yourIncome = document.getElementById("yourIncome").value;
+		var yourTax = " ";
+		
+				if ( yourIncome >= 0 && yourIncome <= 27049) {
+				yourTax = ( yourIncome * .15);
+				}
+				else if (yourIncome >= 27050 && yourIncome <= 65549) {
+				yourTax =(4057.50 +(.275 *( yourIncome - 27050)))
+				}
+				else if (yourIncome >= 65550 && yourIncome <= 136749) {
+				yourTax =(14654.00 + (.305 *( yourIncome - 65550)))
+				}
+				else if (yourIncome >= 136750 && yourIncome <= 297349) {
+				yourTax =(36361.00 + (.355 * ( yourIncome - 136750)))
+				}
+				else if (yourIncome >= 297350 ) {
+				yourTax =(93374.00 + (.391 * ( yourIncome - 297350)))
+				}
+			document.getElementById("yourTax").value = yourTax;
+			}
+	</script>
+</head>
+
+<body>
+	<p>Tax Calculator </p>
+	
+	<form name="totalTax"  method="post">
+		<input type="text" id="yourIncome" size="15"/> Input your income <br />
+		<p><input type="button" value="Calculate Tax" onclick="calculateTax()"></p>
+		<p><input type="text" id="yourTax" size="15" /> Tax to be paid <br />
+		
+
+</body>
+
+<html>
